@@ -57,6 +57,8 @@ async def chat(prompt: Prompt):
         return {"intent": "help"}
     elif "nice to meet you" in text:
         return {"intent": "nice_to_meet_you"}
+    elif "goodbye" in text or "see you later" in text:
+        return {"intent": "goodbye"}
 
     return {"intent": "unknown"}
 
